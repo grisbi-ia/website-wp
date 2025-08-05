@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicaciones | Wetzel's Pretzels Ecuador</title>
+    <meta name="description"
+        content="Encuentra todas las ubicaciones de Wetzel's Pretzels en Ecuador. Actualmente en Paseo San Francisco (Cumbayá) y pronto en las principales ciudades del país.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        href="https://d3ciwvs59ifrt8.cloudfront.net/906dc99f-137f-48c4-8c94-d1148b904054/4ff5a8b8-affb-4eca-83cd-00319aa7dc26.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://d3ciwvs59ifrt8.cloudfront.net/906dc99f-137f-48c4-8c94-d1148b904054/70b94bb9-b5c9-4ef3-9231-5752c67872a5.png"
+                            alt="Wetzel's Pretzels Logo">
+                    </a>
+                </div>
+
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="find-a-location.html" class="active">Ubicaciones</a></li>
+                    <li><a href="gallery.html">Galería</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner - Actualizado con diseño más impactante -->
+    <section class="page-banner about-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="animate-on-scroll">Nuestras Ubicaciones</h1>
+                <p>Disfruta de la experiencia Wetzel's Pretzels en nuestras tiendas. ¡Te esperamos!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buscador de tiendas 
+    <section class="section store-locator">
+        <div class="container">
+            <div class="section-header">
+                <h2>Encuentra una <span class="highlight">Tienda</span></h2>
+                <p>Localiza la tienda Wetzel's Pretzels más cercana</p>
+            </div>
+
+            <div class="locator-form">
+                <div class="locator-input">
+                    <input type="text" placeholder="Ingresa tu ciudad o sector" id="location-search">
+                    <i class="fas fa-map-marker-alt input-icon"></i>
+                </div>
+                <button class="btn btn-primary">Buscar</button>
+            </div>
+
+            <div class="search-results">
+                <div class="no-results">
+                    <img src="/images/logo.jpg" alt="Pretzel icon">
+                    <h3>¡Estamos creciendo!</h3>
+                    <p>Actualmente tenemos 1 ubicación en Ecuador. ¡Estamos planeando abrir más tiendas pronto!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Ubicación actual -->
+    <section class="section current-location">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra <span class="highlight">Ubicación Actual</span></h2>
+                <p>Visítanos y disfruta de la experiencia Wetzel's Pretzels</p>
+            </div>
+
+            <div class="location-card featured-location">
+                <div class="location-image">
+                    <img src="images/paseo_san_francisco.png" alt="Wetzel's Pretzels Paseo San Francisco">
+                    <div class="location-badge">Tienda Insignia</div>
+                </div>
+                <div class="location-info">
+                    <div class="location-name">
+                        <h3>Paseo San Francisco</h3>
+                        <div class="location-open-status">Abierto</div>
+                    </div>
+
+                    <div class="location-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Interoceánica S/N y Chimborazo, Cumbayá, Ecuador
+                        </p>
+                        <p><i class="fas fa-clock"></i> Lun - Vie: 10:00 - 21:00 | Sáb - Dom: 10:00 - 22:00</p>
+                        <p><i class="fas fa-phone"></i> (02) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> paseo@wetzelspretzelsec.com</p>
+                    </div>
+
+                    <div class="location-features">
+                        <span class="feature"><i class="fas fa-wifi"></i> WiFi Gratis</span>
+                        <span class="feature"><i class="fas fa-parking"></i> Parqueadero</span>
+                        <span class="feature"><i class="fas fa-wheelchair"></i> Accesible</span>
+                        <span class="feature"><i class="fas fa-utensils"></i> Área de comida</span>
+                        <span class="feature"><i class="fas fa-baby"></i> Cambiador</span>
+                    </div>
+
+                    <div class="location-actions">
+                        <a href="https://maps.app.goo.gl/ZCHEVqUGQnhUbFGs5" target="_blank" class="btn btn-primary"><i
+                                class="fas fa-directions"></i> Cómo llegar</a>
+                        <a href="menu.html" class="btn btn-secondary"><i class="fas fa-utensils"></i> Ver Menú</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa integrado -->
+            <div class="location-map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.79665736979!2d-78.4282359!3d-0.1936718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d91d38b64b51dd%3A0xb4e76a858452c707!2sPaseo%20San%20Francisco!5e0!3m2!1ses-419!2sec!4v1714962214646!5m2!1ses-419!2sec"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour virtual -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conoce Nuestra <span class="highlight">Tienda</span></h2>
+                <p>Explora nuestra tienda antes de visitarla</p>
+            </div>
+
+            <div class="virtual-tour">
+                <div class="tour-video">
+                    <img src="images/kiosk.jpg" alt="Tour virtual de la tienda">
+                    <div class="video-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="tour-features">
+                    <div class="tour-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Área de Comida</h3>
+                            <p>Espacioso y cómodo lugar para disfrutar de nuestros productos</p>
+                        </div>
+                    </div>
+                    <div class="tour-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Ambiente Familiar</h3>
+                            <p>Espacio perfecto para todas las edades</p>
+                        </div>
+                    </div>
+                    <div class="tour-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-cookie"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Preparación en Vivo</h3>
+                            <p>Observa cómo preparamos nuestros pretzel frescos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entrega a domicilio -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿No puedes <span class="highlight">visitarnos</span>?</h2>
+                <p>Ordena a domicilio a través de nuestros socios de reparto</p>
+            </div>
+
+            <div class="delivery-partners">
+                <div class="partner">
+                    <img src="images/ubereats.png" alt="Uber Eats">
+                </div>
+                <div class="partner">
+                    <img src="images/rappi.jpg" alt="Rappi">
+                </div>
+                <div class="partner">
+                    <img src="images/pedidosya.png" alt="PedidosYa">
+                </div>
+            </div>
+
+            <div class="delivery-cta">
+                <a href="menu.html" class="btn btn-primary">Ordenar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Próximas ubicaciones -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Próximas <span class="highlight">Ubicaciones</span></h2>
+                <p>Estamos planeando expandirnos a las principales ciudades del Ecuador</p>
+            </div>
+
+            <div class="expansion-container">
+                <div class="expansion-map">
+                    <img src="images/mapa_ecuador.jpg" alt="Mapa de Ecuador con expansiones">
+                </div>
+
+                <div class="expansion-cities">
+                    <div class="city-card">
+                        <div class="city-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h3>Quito</h3>
+                        <p>Capital de Ecuador</p>
+                        <span class="coming-soon">Próximamente</span>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h3>Guayaquil</h3>
+                        <p>Puerto principal</p>
+                        <span class="coming-soon">Próximamente</span>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h3>Cuenca</h3>
+                        <p>Ciudad patrimonial</p>
+                        <span class="coming-soon">Próximamente</span>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h3>Manta</h3>
+                        <p>Ciudad costera</p>
+                        <span class="coming-soon">Próximamente</span>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h3>Ambato</h3>
+                        <p>Tierra de frutas y flores</p>
+                        <span class="coming-soon">Próximamente</span>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>¿Tu Ciudad?</h3>
+                        <p>Podríamos estar allí pronto</p>
+                        <span class="coming-soon">Planificación</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franquicias -->
+    <section class="section franchise-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Oportunidades de <span class="highlight">Franquicia</span></h2>
+                <p>Únete a nuestra familia y trae Wetzel's Pretzels a tu ciudad</p>
+            </div>
+
+            <div class="franchise-container">
+                <div class="franchise-content">
+                    <h2>Sé parte de nuestro crecimiento en Ecuador</h2>
+                    <p>Wetzel's Pretzels está buscando socios estratégicos para expandir nuestra presencia en Ecuador.
+                        Ofrecemos un modelo de negocio probado con más de 25 años de experiencia en el mercado
+                        internacional.</p>
+
+                    <div class="franchise-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Marca reconocida internacionalmente</p>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Capacitación completa y soporte continuo</p>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Menú simple y operaciones eficientes</p>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Múltiples formatos: tienda completa, kiosco o carrito</p>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Retorno de inversión atractivo</p>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="btn btn-primary">Más Información</a>
+                </div>
+
+                <div class="franchise-image">
+                    <img src="images/franquicia.jpeg" alt="Oportunidades de Franquicia">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action 
+    <section class="section cta-section bg-pattern">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para disfrutar de los mejores pretzels?</h2>
+                <p>Visítanos en nuestra tienda del Centro Comercial Paseo San Francisco</p>
+                <div class="cta-buttons">
+                    <a href="https://maps.app.goo.gl/ZCHEVqUGQnhUbFGs5" target="_blank" class="btn btn-primary">Cómo
+                        Llegar</a>
+                    <a href="menu.html" class="btn btn-secondary">Ver Menú</a>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <!--
+                    <img src="images/logo_footer.jpg" alt="Wetzel's Pretzels Logo">
+                    -->
+                    <p>Hand Held Happiness desde 1994</p>
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/WetzelsPretzels" class="social-icon" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/wetzelspretzels/" class="social-icon" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/wetzelspretzels" class="social-icon" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.tiktok.com/@wetzelsofficial" class="social-icon" target="_blank"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="find-a-location.html">Ubicaciones</a></li>
+                        <li><a href="gallery.html">Galería</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+                        <li><a href="terms-conditions.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</li>
+                        <li><i class="fas fa-phone"></i> +593 (0) 999 999 999</li>
+                        <li><i class="fas fa-envelope"></i> info@wetzels-ecuador.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wetzel's Pretzels Ecuador. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

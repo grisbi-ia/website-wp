@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | Wetzel's Pretzels Ecuador</title>
+    <meta name="description"
+        content="Explora nuestra galería de fotos de Wetzel's Pretzels Ecuador. Imágenes de nuestros deliciosos pretzels artesanales, locales y más.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        href="https://d3ciwvs59ifrt8.cloudfront.net/906dc99f-137f-48c4-8c94-d1148b904054/4ff5a8b8-affb-4eca-83cd-00319aa7dc26.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Lightbox CSS para galería de imágenes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Estilos específicos para la galería */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 300px;
+            cursor: pointer;
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: var(--white);
+            padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity var(--transition-normal), transform var(--transition-normal);
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-caption h3 {
+            color: var(--white);
+            margin-bottom: var(--spacing-xs);
+            font-size: var(--font-size-lg);
+        }
+
+        .gallery-caption p {
+            margin: 0;
+            font-size: var(--font-size-sm);
+            opacity: 0.9;
+        }
+
+        .gallery-category {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 5px 10px;
+            font-size: var(--font-size-xs);
+            font-weight: 700;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow-sm);
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+
+        /* Para galería en versión masonry */
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 10px;
+            gap: var(--spacing-md);
+        }
+
+        .masonry-item {
+            grid-row-end: span 15;
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .masonry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .masonry-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Filtro de imágenes */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .gallery-filter {
+            padding: var(--spacing-md);
+            background-color: var(--white);
+            border-radius: var(--border-radius-lg);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            color: var(--gray-800);
+            font-weight: 500;
+        }
+
+        .gallery-filter.active,
+        .gallery-filter:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        /* Animación de carga */
+        .gallery-loading {
+            text-align: center;
+            padding: var(--spacing-xl);
+        }
+
+        .gallery-loading i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Paginación */
+        .gallery-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--spacing-xl);
+            gap: var(--spacing-sm);
+        }
+
+        .pagination-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--white);
+            border-radius: var(--border-radius-lg);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            color: var(--gray-800);
+            font-weight: 500;
+        }
+
+        .pagination-item.active,
+        .pagination-item:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Lightbox personalizado */
+        .lb-data .lb-caption {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .lb-data .lb-details {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://d3ciwvs59ifrt8.cloudfront.net/906dc99f-137f-48c4-8c94-d1148b904054/70b94bb9-b5c9-4ef3-9231-5752c67872a5.png"
+                            alt="Wetzel's Pretzels Logo">
+                    </a>
+                </div>
+
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="find-a-location.html">Ubicaciones</a></li>
+                    <li><a href="gallery.html" class="active">Galería</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner menu-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="animate-on-scroll">GALERÍA DE IMÁGENES</h1>
+                <p class="animate-on-scroll">Explora nuestra colección de fotos de productos, locales y experiencias
+                    Wetzel's Pretzels en Ecuador.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Principal -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Nuestros Productos</h2>
+                <p>Descubre los deliciosos productos artesanales de Wetzel's Pretzels</p>
+            </div>
+
+            <div class="gallery-container animate-on-scroll">
+                <!-- Elemento de Galería 1 -->
+                <a href="images/original_pretzel.jpg" class="gallery-item" data-lightbox="gallery"
+                    data-title="Original Pretzel" data-category="productos">
+                    <div class="gallery-category">Productos</div>
+                    <img src="images/original_pretzel.jpg" alt="Original Pretzel" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Original Pretzel</h3>
+                        <p>Nuestro pretzel clásico, enrollado a mano y horneado fresco a diario con un toque de sal.</p>
+                    </div>
+                </a>
+
+                <!-- Elemento de Galería 2 -->
+                <a href="images/cheese_meltdown.jpg" class="gallery-item" data-lightbox="gallery"
+                    data-title="Cheese Meltdown" data-category="productos">
+                    <div class="gallery-category">Productos</div>
+                    <img src="images/cheese_meltdown.jpg" alt="Cheese Meltdown" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Cheese Meltdown</h3>
+                        <p>Nuestro pretzel original cubierto con queso cheddar derretido.</p>
+                    </div>
+                </a>
+
+                <!-- Elemento de Galería 3 -->
+                <a href="images/sinful_cinnamon.jpg" class="gallery-item" data-lightbox="gallery"
+                    data-title="Sinful Cinnamon" data-category="productos">
+                    <div class="gallery-category">Productos</div>
+                    <img src="images/sinful_cinnamon.jpg" alt="Sinful Cinnamon" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Sinful Cinnamon</h3>
+                        <p>Nuestro pretzel original cubierto con una mezcla irresistible de canela y azúcar.</p>
+                    </div>
+                </a>
+
+                <!-- Elemento de Galería 4 -->
+                <a href="images/wetzel_dog.jpg" class="gallery-item" data-lightbox="gallery" data-title="Wetzel Dog"
+                    data-category="productos">
+                    <div class="gallery-category">Productos</div>
+                    <img src="images/wetzel_dog.jpg" alt="Wetzel Dog" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Wetzel Dog</h3>
+                        <p>Nuestro clásico perrito caliente envuelto en masa de pretzel y horneado.</p>
+                    </div>
+                </a>
+
+                <!-- Elemento de Galería 5 -->
+                <a href="images/pepperoni_twist.jpg" class="gallery-item" data-lightbox="gallery"
+                    data-title="Pepperoni Twist" data-category="productos">
+                    <div class="gallery-category">Productos</div>
+                    <img src="images/pepperoni_twist.jpg" alt="Pepperoni Twist" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Pepperoni Twist</h3>
+                        <p>Un pretzel con sabor a pizza cubierto con pepperoni y una mezcla de tres quesos.</p>
+                    </div>
+                </a>
+
+                <!-- Elemento de Galería 6 -->
+                <a href="images/fresh_lemonade.jpg" class="gallery-item" data-lightbox="gallery"
+                    data-title="Fresh Lemonade" data-category="productos">
+                    <div class="gallery-category">Productos</div>
+                    <img src="images/fresh_lemonade.jpg" alt="Fresh Lemonade" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Fresh Lemonade</h3>
+                        <p>Limonada fresca hecha al momento, perfecta para acompañar tu pretzel favorito.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Locales -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Nuestros Locales</h2>
+                <p>Conoce nuestras tiendas Wetzel's Pretzels en Ecuador</p>
+            </div>
+
+            <div class="gallery-container animate-on-scroll">
+                <!-- Local 1 -->
+                <a href="images/paseo_san_francisco.jpeg" class="gallery-item" data-lightbox="locales"
+                    data-title="Tienda Paseo San Francisco" data-category="locales">
+                    <div class="gallery-category">Locales</div>
+                    <img src="images/paseo_san_francisco.jpeg" alt="Tienda Paseo San Francisco" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Tienda Paseo San Francisco</h3>
+                        <p>Nuestra primera tienda en Ecuador, ubicada en el Centro Comercial Paseo San Francisco.</p>
+                    </div>
+                </a>
+
+                <!-- Local 2 -->
+                <a href="images/kiosk.jpg" class="gallery-item" data-lightbox="locales"
+                    data-title="Kiosko Wetzel's Pretzels" data-category="locales">
+                    <div class="gallery-category">Locales</div>
+                    <img src="images/kiosk.jpg" alt="Kiosko Wetzel's Pretzels" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Kiosko Wetzel's Pretzels</h3>
+                        <p>Nuestro kiosko ofrece pretzels recién horneados en un formato más compacto.</p>
+                    </div>
+                </a>
+
+                <!-- Local 3 -->
+                <a href="images/img1.jpg" class="gallery-item" data-lightbox="locales" data-title="Interior de Tienda"
+                    data-category="locales">
+                    <div class="gallery-category">Locales</div>
+                    <img src="images/img1.jpg" alt="Interior de Tienda" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Interior de Tienda</h3>
+                        <p>Vista del interior de nuestra tienda principal, donde puedes ver la elaboración de pretzels
+                            frescos.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Tipo Masonry -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Momentos Wetzel's</h2>
+                <p>Experiencias memorables en Wetzel's Pretzels Ecuador</p>
+            </div>
+
+            <div class="masonry-grid animate-on-scroll">
+                <!-- Masonry Item 1 -->
+                <a href="images/img2.jpg" class="masonry-item" data-lightbox="experiencias"
+                    data-title="Preparación de Pretzels" data-category="equipo">
+                    <img src="images/img2.jpg" alt="Preparación de Pretzels" class="masonry-image">
+                </a>
+
+                <!-- Masonry Item 2 -->
+                <a href="images/original_bitz.jpg" class="masonry-item" data-lightbox="experiencias"
+                    data-title="Original Bitz servidos" data-category="productos">
+                    <img src="images/original_bitz.jpg" alt="Original Bitz servidos" class="masonry-image">
+                </a>
+
+                <!-- Masonry Item 3 -->
+                <a href="images/cheese.jpg" class="masonry-item" data-lightbox="experiencias" data-title="Dips de Queso"
+                    data-category="productos">
+                    <img src="images/cheese.jpg" alt="Dips de Queso" class="masonry-image">
+                </a>
+
+                <!-- Masonry Item 4 -->
+                <a href="images/jalapeno_cheese.jpg" class="masonry-item" data-lightbox="experiencias"
+                    data-title="Jalapeño Cheese Pretzel" data-category="productos">
+                    <img src="images/jalapeno_cheese.jpg" alt="Jalapeño Cheese Pretzel" class="masonry-image">
+                </a>
+
+                <!-- Masonry Item 5 -->
+                <a href="images/cin_a_bitz.jpg" class="masonry-item" data-lightbox="experiencias"
+                    data-title="Cin-A-Bitz frescos" data-category="productos">
+                    <img src="images/cin_a_bitz.jpg" alt="Cin-A-Bitz frescos" class="masonry-image">
+                </a>
+
+                <!-- Masonry Item 6 -->
+                <a href="images/frozen_lemonade.jpg" class="masonry-item" data-lightbox="experiencias"
+                    data-title="Frozen Lemonade" data-category="productos">
+                    <img src="images/frozen_lemonade.jpg" alt="Frozen Lemonade" class="masonry-image">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeo Destacado -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Wetzel's en Acción</h2>
+                <p>Observa cómo se preparan nuestros deliciosos pretzels artesanales</p>
+            </div>
+
+            <div class="video-container animate-on-scroll">
+                <div class="tour-video" style="width: 80%; margin: 0 auto;">
+                    <img src="images/img1.jpg" alt="Video de preparación de pretzels">
+                    <div class="video-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <p>Hand Held Happiness desde 1994</p>
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/WetzelsPretzels" class="social-icon" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/wetzelspretzels/" class="social-icon" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/wetzelspretzels" class="social-icon" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.tiktok.com/@wetzelsofficial" class="social-icon" target="_blank"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="find-a-location.html">Ubicaciones</a></li>
+                        <li><a href="gallery.html">Galería</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+                        <li><a href="terms-conditions.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</li>
+                        <li><i class="fas fa-phone"></i> +593 (0) 999 999 999</li>
+                        <li><i class="fas fa-envelope"></i> info@wetzels-ecuador.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wetzel's Pretzels Ecuador. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- Lightbox JS para galería de imágenes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+</body>
+
+</html>
