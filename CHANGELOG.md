@@ -5,6 +5,62 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.1.0] - 2025-08-05
+
+### 🎨 Mejoras de Diseño y UX
+
+#### ✨ Agregado
+- **Sistema de Botones Mejorado**
+  - Nueva clase `.btn-blue-on-yellow` para botones sobre fondos amarillos
+  - Nueva clase `.btn-yellow-on-light` para botones sobre fondos claros
+  - Efectos hover mejorados con transiciones suaves
+  - Mejor contraste y accesibilidad visual
+
+- **Sistema de Tabs Renovado**
+  - Tabs con fondo amarillo y texto/iconos azules (estado normal)
+  - Hover y estado activo con fondo azul y texto/iconos blancos
+  - Aplicado consistentemente en todas las páginas
+
+#### 🔧 Mejorado
+- **Navegación FAQ**
+  - Arreglado sistema de navegación por pestañas
+  - Sincronización perfecta entre scroll y pestañas activas
+  - JavaScript mejorado para manejo de estados activos
+
+- **Colores de Marca**
+  - Implementación completa de colores oficiales Wetzel's
+  - Actualización de variables CSS con colores verificados
+  - Consistencia visual en todos los componentes
+
+#### 🎯 Botones Actualizados por Página
+- **index.html**
+  - "EXPLORAR MENÚ" y "ENCUENTRA TU TIENDA": Ahora azul con hover blanco
+  - "VER MENÚ COMPLETO", "Conoce Más", "VER TODAS LAS UBICACIONES": Amarillo con hover azul
+
+- **about.html**
+  - "Ver Todas las Preguntas Frecuentes": Amarillo con hover azul
+
+- **find-a-location.html**
+  - "Cómo llegar", "Ver Menú", "Ordenar Ahora": Amarillo con hover azul
+
+- **contact.html**
+  - "Enviar Mensaje": Amarillo con hover azul
+  - "Encuentra tu tienda", "Ver Menú": Mantienen estilo amarillo existente
+
+- **faq.html**
+  - "Contactar Ahora": Mantiene estilo amarillo con hover blanco
+
+#### 🏷️ Tabs Renovados
+- **index.html**: Todos, Pretzels, Wetzel Bitz, Wetzel Dogs, Bebidas
+- **menu.html**: Pretzels, Wetzel Bitz, Wetzel Dogs, Dips, Bebidas  
+- **faq.html**: General, Productos, Ingredientes, Ubicaciones
+
+#### 🔧 Cambios Técnicos
+- Actualización de `main.js` para mejorar funcionalidad de pestañas FAQ
+- Nuevas clases CSS para diferentes contextos de botones
+- Mejoras en transiciones y efectos hover
+- Optimización del sistema de navegación
+
 ## [1.0.0] - 2025-08-05
 
 ### 🎉 Lanzamiento Inicial

@@ -6,13 +6,15 @@
 
 /* Variables CSS */
 :root {
-    /* Colores principales */
-    --primary-color: #004594;
-    /* Azul Wetzel's - color correcto de la marca */
-    --secondary-color: #fec33a;
-    /* Amarillo Wetzel's - color correcto de la marca */
-    --tertiary-color: #0072CE;
-    /* Azul complementario */
+    /* Colores principales - Actualizados con colores oficiales Wetzel's */
+    --primary-color: #004694;
+    /* Azul Wetzel's - color oficial de la marca */
+    --secondary-color: #ffda00;
+    /* Amarillo oficial Wetzel's */
+    --tertiary-color: #005cb9;
+    /* Azul claro oficial */
+    --dark-blue: #001c71;
+    /* Azul oscuro oficial */
 
     /* Colores de fondo */
     --background-primary: var(--secondary-color);
@@ -208,7 +210,7 @@ ol {
 .section-title {
     text-align: center;
     margin-bottom: var(--spacing-2xl);
-    color: var(--gray-900);
+    color: var(--primary-color);
 }
 
 .row {
@@ -284,6 +286,42 @@ ol {
 .btn-outline:hover {
     background-color: var(--primary-color);
     color: var(--white);
+}
+
+.btn-yellow {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-yellow:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-blue-on-yellow {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.btn-blue-on-yellow:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-yellow-on-light {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-yellow-on-light:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
 }
 
 /* Header */
@@ -501,6 +539,7 @@ ol {
 .product-info h3 {
     font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
 }
 
 .product-price {
@@ -527,11 +566,12 @@ ol {
 .category-tab {
     padding: var(--spacing-sm) var(--spacing-lg);
     margin: 0 var(--spacing-xs);
-    background-color: var(--gray-100);
+    background-color: var(--secondary-color);
     border-radius: var(--border-radius-md);
     cursor: pointer;
     transition: all var(--transition-fast);
     margin-bottom: var(--spacing-xs);
+    color: var(--primary-color);
 }
 
 .category-tab:hover,
@@ -574,6 +614,7 @@ ol {
 .feature-card h3 {
     font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
 }
 
 /* Sobre nosotros */
@@ -1191,10 +1232,10 @@ textarea.form-control {
     padding: var(--spacing-md);
     border-radius: var(--border-radius-lg);
     transition: all var(--transition-fast);
-    background-color: var(--gray-100);
+    background-color: var(--secondary-color);
     min-width: 100px;
     text-decoration: none;
-    color: var(--gray-800);
+    color: var(--primary-color);
 }
 
 .faq-nav-item.active {
@@ -1203,20 +1244,25 @@ textarea.form-control {
 }
 
 .faq-nav-item.active .faq-nav-icon {
-    background-color: var(--secondary-color);
+    background-color: var(--white);
     color: var(--primary-color);
 }
 
 .faq-nav-item:hover:not(.active) {
-    background-color: var(--gray-100);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white);
     transform: translateY(-5px);
+}
+
+.faq-nav-item:hover:not(.active) .faq-nav-icon {
+    background-color: var(--white);
+    color: var(--primary-color);
 }
 
 .faq-nav-icon {
     width: 50px;
     height: 50px;
-    background-color: var(--gray-200);
+    background-color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1224,6 +1270,7 @@ textarea.form-control {
     font-size: 1.8rem;
     margin-bottom: var(--spacing-sm);
     transition: background-color var(--transition-fast), color var(--transition-fast);
+    color: var(--secondary-color);
 }
 
 /* Contenedor de preguntas FAQ */
@@ -1414,10 +1461,10 @@ textarea.form-control {
     padding: var(--spacing-md);
     border-radius: var(--border-radius-lg);
     transition: all var(--transition-fast);
-    background-color: var(--gray-100);
+    background-color: var(--secondary-color);
     min-width: 100px;
     text-decoration: none;
-    color: var(--gray-800);
+    color: var(--primary-color);
 }
 
 .menu-nav-item:hover,
@@ -1435,7 +1482,7 @@ textarea.form-control {
 
 .menu-nav-item:hover .menu-nav-icon,
 .menu-nav-item.active .menu-nav-icon {
-    color: var(--secondary-color);
+    color: var(--white);
 }
 
 /* Secciones del menú */

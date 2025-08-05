@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Navegación en la página de menú
+    // Navegación en la página de menú y FAQ
     function updateActiveMenuSection() {
         if (menuNavItems.length === 0 || sections.length === 0) return;
 
@@ -107,6 +107,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 item.classList.add('active');
             }
         });
+
+        // Actualizar navegación activa para FAQ
+        const faqNavItems = document.querySelectorAll('.faq-nav-item');
+        if (faqNavItems.length > 0 && current) {
+            faqNavItems.forEach(item => {
+                item.classList.remove('active');
+                const href = item.getAttribute('href');
+                if (href && href.includes(current)) {
+                    item.classList.add('active');
+                }
+            });
+        }
     }
 
     // Navegación suave para enlaces internos
@@ -123,6 +135,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     top: targetElement.offsetTop - 100,
                     behavior: 'smooth'
                 });
+
+                // Actualizar pestañas FAQ activas
+                if (this.classList.contains('faq-nav-item')) {
+                    document.querySelectorAll('.faq-nav-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
 
                 // Cerrar menú móvil si está abierto
                 if (navMenu && navMenu.classList.contains('active')) {
