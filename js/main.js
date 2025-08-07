@@ -292,4 +292,97 @@ document.addEventListener('DOMContentLoaded', function () {
             goToSlide(currentSlide);
         }, 5000);
     }
+
+    // Carrusel de Productos Destacados
+    let currentSlideIndex = 0;
+    const carousel = document.querySelector('.carousel-container');
+    const slides = document.querySelectorAll('.featured-product');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const totalSlides = slides.length;
+
+    if (carousel && slides.length > 0) {
+        // Función para ir a un slide específico
+        function goToSlide(slideIndex) {
+            currentSlideIndex = slideIndex;
+            const translateX = -slideIndex * 100;
+            carousel.style.transform = `translateX(${translateX}%)`;
+
+            // Actualizar indicadores
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === slideIndex);
+            });
+        }
+
+        // Función para mover el carrusel
+        window.moveCarousel = function (direction) {
+            if (direction === 1) {
+                currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            } else {
+                currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+            }
+            goToSlide(currentSlideIndex);
+        };
+
+        // Función para ir a un slide específico desde indicadores
+        window.currentSlide = function (slideIndex) {
+            goToSlide(slideIndex - 1); // Los indicadores empiezan en 1
+        };
+
+        // Auto-play del carrusel (opcional)
+        let autoplayInterval = setInterval(() => {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            goToSlide(currentSlideIndex);
+        }, 8000); // Cambia cada 8 segundos
+
+        // Pausar autoplay al hacer hover
+        const carouselElement = document.querySelector('.featured-carousel');
+        if (carouselElement) {
+            carouselElement.addEventListener('mouseenter', () => {
+                clearInterval(autoplayInterval);
+            });
+
+            carouselElement.addEventListener('mouseleave', () => {
+                autoplayInterval = setInterval(() => {
+                    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+                    goToSlide(currentSlideIndex);
+                }, 8000);
+            });
+        }
+
+        // Touch/swipe support para móviles
+        let startX = 0;
+        let isDragging = false;
+
+        if (carouselElement) {
+            carouselElement.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            });
+
+            carouselElement.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+            });
+
+            carouselElement.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+
+                const endX = e.changedTouches[0].clientX;
+                const diffX = startX - endX;
+
+                if (Math.abs(diffX) > 50) { // Mínimo 50px de movimiento
+                    if (diffX > 0) {
+                        moveCarousel(1); // Swipe izquierda -> siguiente
+                    } else {
+                        moveCarousel(-1); // Swipe derecha -> anterior
+                    }
+                }
+
+                isDragging = false;
+            });
+        }
+
+        // Inicializar el primer slide
+        goToSlide(0);
+    }
 });

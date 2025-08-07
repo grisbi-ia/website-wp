@@ -9,8 +9,7 @@
         content="Disfruta de los mejores pretzels recién horneados, Wetzel Dogs y deliciosas bebidas en Wetzel's Pretzels Ecuador. ¡Hand-Rolled Happiness desde 1994!">
 
     <!-- Favicon -->
-    <link rel="shortcut icon"
-        href="https://d3ciwvs59ifrt8.cloudfront.net/906dc99f-137f-48c4-8c94-d1148b904054/4ff5a8b8-affb-4eca-83cd-00319aa7dc26.png">
+    <link rel="shortcut icon" href="images/favicon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,8 +30,7 @@
             <div class="nav-container">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="https://d3ciwvs59ifrt8.cloudfront.net/906dc99f-137f-48c4-8c94-d1148b904054/70b94bb9-b5c9-4ef3-9231-5752c67872a5.png"
-                            alt="Wetzel's Pretzels Logo">
+                        <img src="images/logo_header.png" alt="Wetzel's Pretzels Logo">
                     </a>
                 </div>
 
@@ -82,126 +80,165 @@
         </div>
     </section>
 
-    <!-- Featured Products - Rediseñado con estilo más visual -->
-    <section class="section products-section">
+    <!-- Productos Destacados con Carrusel Interactivo -->
+    <section class="featured-products">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">NUESTROS PRODUCTOS FAVORITOS</h2>
-            <p class="section-description animate-on-scroll">Descubre nuestros pretzels recién horneados, enrollados a
-                mano diariamente, y acompáñalos con nuestras deliciosas bebidas
-            </p>
+            <h2 class="section-title animate-on-scroll">PRODUCTOS DESTACADOS</h2>
+            <p class="section-description animate-on-scroll">Descubre nuestros favoritos con ofertas especiales y
+                sabores únicos que conquistan paladares</p>
 
-            <div class="category-tabs animate-on-scroll">
-                <div class="category-tab active" data-category="all">Todos</div>
-                <div class="category-tab" data-category="pretzels">Pretzels</div>
-                <div class="category-tab" data-category="bitz">Wetzel Bitz</div>
-                <div class="category-tab" data-category="dogs">Wetzel Dogs</div>
-                <div class="category-tab" data-category="drinks">Bebidas</div>
+            <div class="featured-carousel">
+                <div class="carousel-container">
+                    <!-- Producto 1: Original Pretzel -->
+                    <div class="featured-product">
+                        <div class="featured-product-image">
+                            <img src="images/original_pretzel.jpg" alt="Original Pretzel">
+                            <div class="featured-badge bestseller">BESTSELLER</div>
+                        </div>
+                        <div class="featured-product-content">
+                            <div class="featured-product-category">PRETZEL CLÁSICO</div>
+                            <h3 class="featured-product-title">Original Pretzel</h3>
+                            <p class="featured-product-description">
+                                Nuestro pretzel tradicional enrollado a mano y horneado fresco diariamente.
+                                Con un toque perfecto de sal marina que realza su sabor único y auténtico.
+                            </p>
+                            <div class="featured-product-price">
+                                <span class="featured-current-price">$2.99</span>
+                            </div>
+                            <div class="featured-product-actions">
+                                <a href="menu.html" class="btn btn-primary">
+                                    <i class="fas fa-eye"></i> VER MÁS
+                                </a>
+                                <a href="menu.html" class="btn btn-outline">VER MENÚ</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2: Sinful Cinnamon -->
+                    <div class="featured-product">
+                        <div class="featured-product-image">
+                            <img src="images/sinful_cinnamon.jpg" alt="Sinful Cinnamon">
+                            <!--
+                            <div class="featured-badge offer">OFERTA ESPECIAL</div>
+                            -->
+                        </div>
+                        <div class="featured-product-content">
+                            <div class="featured-product-category">PRETZEL DULCE</div>
+                            <h3 class="featured-product-title">Sinful Cinnamon</h3>
+                            <p class="featured-product-description">
+                                Nuestro pretzel irresistible cubierto con canela y azúcar. Una explosión de dulzura
+                                que te transportará al paraíso con cada bocado.
+                            </p>
+                            <div class="featured-product-price">
+                                <span class="featured-current-price">$3.99</span>
+                                <!--
+                                <span class="featured-original-price">$4.49</span>
+                                <span class="featured-discount">-11%</span>
+                                -->
+                            </div>
+                            <div class="featured-product-actions">
+                                <a href="menu.html" class="btn btn-primary">
+                                    <i class="fas fa-eye"></i> VER MÁS
+                                </a>
+                                <a href="menu.html" class="btn btn-outline">VER MENÚ</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3: Wetzel Dog -->
+                    <div class="featured-product">
+                        <div class="featured-product-image">
+                            <img src="images/wetzel_dog.jpg" alt="Wetzel Dog">
+                            <!--
+                            <div class="featured-badge new">NUEVO</div>
+                            -->
+                        </div>
+                        <div class="featured-product-content">
+                            <div class="featured-product-category">WETZEL DOG</div>
+                            <h3 class="featured-product-title">Wetzel Dog Clásico</h3>
+                            <p class="featured-product-description">
+                                Perrito caliente de carne 100% envuelto en nuestra masa de pretzel y horneado
+                                a la perfección. La combinación perfecta de sabor y tradición.
+                            </p>
+                            <div class="featured-product-price">
+                                <span class="featured-current-price">$4.99</span>
+                            </div>
+                            <div class="featured-product-actions">
+                                <a href="menu.html" class="btn btn-primary">
+                                    <i class="fas fa-eye"></i> VER MÁS
+                                </a>
+                                <a href="menu.html" class="btn btn-outline">VER MENÚ</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 4: Combo Especial -->
+                    <div class="featured-product">
+                        <div class="featured-product-image">
+                            <img src="images/fresh_lemonade.jpg" alt="Fresh Lemonade">
+                            <!--
+                            <div class="featured-badge offer">COMBO ESPECIAL</div>
+                            -->
+                        </div>
+                        <div class="featured-product-content">
+                            <div class="featured-product-category">BEBIDA</div>
+                            <h3 class="featured-product-title">Fresh Lemonade</h3>
+                            <p class="featured-product-description">
+                                Tu pretzel favorito acompañado de nuestra refrescante limonada natural.
+                                El combo perfecto para disfrutar en cualquier momento del día.
+                            </p>
+                            <div class="featured-product-price">
+                                <span class="featured-current-price">$2.99</span>
+                                <!--
+                                <span class="featured-original-price">$7.48</span>
+                                <span class="featured-discount">AHORRA $0.49</span>
+                                -->
+                            </div>
+                            <div class="featured-product-actions">
+                                <a href="menu.html" class="btn btn-primary">
+                                    <i class="fas fa-eye"></i> VER MÁS
+                                </a>
+                                <a href="menu.html" class="btn btn-outline">VER MENÚ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navegación del carrusel -->
+                <button class="carousel-nav prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
 
-            <div class="product-grid">
-                <!-- Pretzel Original -->
-                <div class="product-card animate-on-scroll" data-category="pretzels">
-                    <div class="product-image">
-                        <img src="images/original_pretzel.jpg" alt="Original Pretzel">
-                        <div class="product-badge">BESTSELLER</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Original Pretzel</h3>
-                        <p>Nuestro pretzel clásico, enrollado a mano y horneado fresco a diario con un toque de sal.
-                        </p>
-                        <div class="product-price">
-                            <span class="price">$3.99</span>
-                            <a href="menu.html" class="btn btn-outline">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sinful Cinnamon -->
-                <div class="product-card animate-on-scroll" data-category="pretzels">
-                    <div class="product-image">
-                        <img src="images/sinful_cinnamon.jpg" alt="Sinful Cinnamon">
-                    </div>
-                    <div class="product-info">
-                        <h3>Sinful Cinnamon</h3>
-                        <p>Pretzel dulce cubierto con una irresistible mezcla de canela y azúcar. ¡Nuestro dulce
-                            favorito!
-                        </p>
-                        <div class="product-price">
-                            <span class="price">$4.49</span>
-                            <a href="menu.html" class="btn btn-outline">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Wetzel Bitz Original -->
-                <div class="product-card animate-on-scroll" data-category="bitz">
-                    <div class="product-image">
-                        <img src="images/original_bitz.jpg" alt="Original Bitz">
-                        <div class="product-badge">IDEAL PARA COMPARTIR</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Original Bitz</h3>
-                        <p>Bocados de nuestro pretzel original, perfectos para compartir o disfrutar al andar.</p>
-                        <div class="product-price">
-                            <span class="price">$4.29</span>
-                            <a href="menu.html" class="btn btn-outline">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Wetzel Dog -->
-                <div class="product-card animate-on-scroll" data-category="dogs">
-                    <div class="product-image">
-                        <img src="images/wetzel_dog.jpg" alt="Wetzel Dog">
-                    </div>
-                    <div class="product-info">
-                        <h3>Wetzel Dog</h3>
-                        <p>Perrito caliente de carne de res 100% envuelto en masa de pretzel y horneado a la perfección.
-                        </p>
-                        <div class="product-price">
-                            <span class="price">$5.49</span>
-                            <a href="menu.html" class="btn btn-outline">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fresh Lemonade -->
-                <div class="product-card animate-on-scroll" data-category="drinks">
-                    <div class="product-image">
-                        <img src="images/fresh_lemonade.jpg" alt="Fresh Lemonade">
-                        <div class="product-badge">REFRESCANTE</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Fresh Lemonade</h3>
-                        <p>Limonada fresca hecha al momento, perfecta para acompañar tu pretzel favorito.</p>
-                        <div class="product-price">
-                            <span class="price">$3.49</span>
-                            <a href="menu.html" class="btn btn-outline">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Jalapeño Cheese Pretzel -->
-                <div class="product-card animate-on-scroll" data-category="pretzels">
-                    <div class="product-image">
-                        <img src="images/jalapeno_cheese.jpg" alt="Jalapeño Cheese">
-                        <div class="product-badge">PICANTE</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jalapeño Cheese</h3>
-                        <p>Un pretzel con jalapeños picantes y queso derretido. La combinación perfecta de picante y
-                            queso.
-                        </p>
-                        <div class="product-price">
-                            <span class="price">$5.49</span>
-                            <a href="menu.html" class="btn btn-outline">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Indicadores del carrusel -->
+            <div class="carousel-indicators">
+                <div class="carousel-indicator active" onclick="currentSlide(1)"></div>
+                <div class="carousel-indicator" onclick="currentSlide(2)"></div>
+                <div class="carousel-indicator" onclick="currentSlide(3)"></div>
+                <div class="carousel-indicator" onclick="currentSlide(4)"></div>
             </div>
+        </div>
+    </section>
 
-            <div class="text-center mt-5 animate-on-scroll">
-                <a href="menu.html" class="btn btn-yellow-on-light">VER MENÚ COMPLETO</a>
+    <!-- Sección Encuentra Tu Tienda -->
+    <section class="delivery-section">
+        <div class="container">
+            <div class="delivery-content" style="text-align: center;">
+                <div style="font-size: 4rem; color: var(--secondary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h2>¡ENCUENTRA TU TIENDA WETZEL'S!</h2>
+                <p>Visítanos en nuestras ubicaciones en Ecuador y disfruta de nuestros pretzels recién horneados.
+                    Experimenta la auténtica experiencia Wetzel's en persona.</p>
+
+                <div class="featured-product-actions">
+                    <a href="find-a-location.html" class="btn btn-yellow">
+                        <i class="fas fa-map-marker-alt"></i> VER UBICACIONES
+                    </a>
+                </div>
             </div>
         </div>
     </section>

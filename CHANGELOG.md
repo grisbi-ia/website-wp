@@ -5,6 +5,141 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.2.0] - 2025-08-06
+
+### 🎨 Mejoras de Diseño y Experiencia
+
+#### ✨ Agregado
+- **Nuevas Páginas Legales**
+  - `privacy-policy.html`: Política de privacidad completa con 13 secciones
+  - `terms-conditions.html`: Términos y condiciones con 19 secciones
+  - Cumplimiento con normativas ecuatorianas y GDPR
+  - Información específica de Ecuador (RUC, jurisdicción, apps de delivery)
+
+- **Herramientas de Desarrollo**
+  - `create-page.sh`: Script bash para crear páginas nuevas automáticamente
+  - `css/utilities.css`: Sistema de clases utilitarias CSS
+  - `DEPLOYMENT-GUIDE.md`: Guía completa para despliegue en hosting compartido
+  - `DESARROLLO_LOG.md`: Log detallado del proceso de desarrollo
+
+- **Nuevos Assets**
+  - `images/coffee.jpg`: Nueva imagen para producto café
+  - `images/favicon.png`: Favicon localizado
+  - `images/logo_header.png`: Logo del header localizado
+  - `images/footer_background.jpg`: Fondo mejorado para footer
+
+#### 🔄 Mejorado
+- **Sistema de Botones Refinado**
+  - Botones del banner principal (`index.html`): Fondo azul → hover blanco
+  - Botones "VER MÁS" del carrusel: Fondo amarillo → hover azul
+  - Botón "VER UBICACIONES": Cambiado a clase `btn-yellow` para mejor contraste
+  - Consistencia visual mejorada en todos los botones
+
+- **Página de Contacto Rediseñada**
+  - Layout de información de contacto en grid 2x2
+  - Sección amarilla de ancho completo para mejor UX
+  - Tipografía consistente aplicada a formularios
+
+- **Sistema de Colores Corregido**
+  - Alternancia sistemática azul/amarillo en secciones
+  - `about.html`: "Nuestros Valores" (amarillo) y "Momentos Wetzel's" (azul)
+  - `gallery.html`: Patrón de colores alternos implementado
+  - Variables CSS correctamente aplicadas sin conflictos
+
+- **Assets Localizados**
+  - Eliminación de dependencias CDN externas para favicon y logos
+  - Mejora en tiempos de carga y confiabilidad
+  - Todos los assets críticos ahora son locales
+
+#### 🍕 Nuevo Producto
+- **Café agregado al menú**
+  - Precio: $1.00
+  - Imagen: `coffee.jpg`
+  - Descripción llamativa: "Delicioso café recién preparado, complemento perfecto"
+  - Ubicado en sección de bebidas de `menu.html`
+
+#### 🧹 Limpieza y Optimización
+- **Archivos CSS Optimizados**
+  - Eliminación de variables CSS conflictivas en `utilities.css`
+  - Corrección de clases duplicadas de padding
+  - Sistema de variables consolidado y limpio
+
+- **Estructura de Proyecto**
+  - Eliminación de archivos de ejemplo PHP y SSI
+  - Limpieza de templates no utilizados
+  - Estructura de directorios optimizada
+
+#### 🔧 Cambios Técnicos
+- **Navegación Unificada**
+  - Banner y footer estandarizados en todas las páginas
+  - Links de navegación actualizados para incluir páginas legales
+  - Comportamiento de enlaces unificado (misma ventana)
+
+- **Sistema de Componentes**
+  - Clases CSS utilitarias para reutilización
+  - Sistema de grid responsive mejorado
+  - Animaciones y transiciones optimizadas
+
+### 🎯 Páginas Actualizadas
+
+#### 📄 `index.html`
+- Botones del banner principal rediseñados (azul → hover blanco)
+- Botones carrusel "VER MÁS" (amarillo → hover azul)
+- Botón "VER UBICACIONES" con mejor contraste (clase `btn-yellow`)
+
+#### 👥 `about.html`
+- Sección "Nuestros Valores" con fondo amarillo
+- Archivo `utilities.css` agregado para clases utilitarias
+- Navegación legal agregada al footer
+
+#### 📞 `contact.html`
+- Rediseño completo del layout de información
+- Grid 2x2 para información de contacto
+- Sección amarilla de ancho completo
+- Tipografía del sitio aplicada consistentemente
+
+#### 🍽️ `menu.html`
+- Nuevo producto "Café" agregado ($1.00)
+- Imagen `coffee.jpg` integrada
+- Descripción optimizada para SEO y conversión
+
+#### 🏢 Todas las páginas
+- Assets localizados (favicon, logo del header)
+- Enlaces a páginas legales en el footer
+- Navegación unificada y consistente
+
+### 🛠️ Herramientas de Desarrollo
+
+#### 📜 `create-page.sh`
+- Script automatizado para crear páginas nuevas
+- Template con header/footer unificado
+- Variables para título y descripción personalizados
+
+#### 🎨 `css/utilities.css`
+- Clases utilitarias para espaciado (mt-1 a mt-5, mb-1 a mb-5, p-1 a p-5)
+- Sistema de grid responsivo (.grid-2, .grid-3, .grid-4)
+- Clases de colores y texto (.bg-primary, .text-primary, etc.)
+- Botones reutilizables (.btn-primary, .btn-secondary)
+- Tarjetas y animaciones (.card, .fade-in, .slide-up)
+
+#### 📚 `DEPLOYMENT-GUIDE.md`
+- Guía completa para hosting compartido
+- Instrucciones paso a paso para cPanel
+- Optimizaciones opcionales (.htaccess, compresión)
+- Lista de verificación para despliegue
+
+### 📋 Cumplimiento Legal
+- **Ecuador-específico**: RUC, jurisdicción, normativas locales
+- **Apps de delivery**: Uber Eats, Rappi, PedidosYa mencionadas
+- **GDPR-style**: Derechos de usuarios, protección de datos
+- **Términos completos**: 19 secciones cubriendo todos los aspectos legales
+
+### 🔧 Optimizaciones Técnicas
+- Eliminación de archivos PHP/SSI de ejemplo
+- Corrección de conflictos en variables CSS  
+- Sistema de clases utilitarias para mejor mantenibilidad
+- Assets localizados para mejor performance
+
 ## [1.1.0] - 2025-08-05
 
 ### 🎨 Mejoras de Diseño y UX
