@@ -94,10 +94,9 @@ cat > "${PAGE_NAME}.html" << EOF
                     <p>Hand Held Happiness desde 1994</p>
 
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/WetzelsPretzels" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/wetzelspretzels/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/wetzelspretzels" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.tiktok.com/@wetzelsofficial" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/WetzelsPretzelsEcuador" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/wetzelspretzelsec/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@wetzelspretzelsec" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -127,7 +126,7 @@ cat > "${PAGE_NAME}.html" << EOF
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</li>
                         <li><i class="fas fa-phone"></i> +593 (0) 999 999 999</li>
-                        <li><i class="fas fa-envelope"></i> info@wetzels-ecuador.com</li>
+                        <li><i class="fas fa-envelope"></i> info@wetzelspretzels.ec</li>
                     </ul>
                 </div>
             </div>

@@ -5,6 +5,26 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.2.1] - 2025-09-03
+
+### 🛠️ Cambios y Correcciones
+
+- Actualización de enlaces de redes sociales en todas las páginas y footer:
+  - Facebook: ahora apunta a la cuenta oficial de Ecuador
+  - Instagram y TikTok: nuevos enlaces oficiales
+  - Twitter eliminado de todos los footers y secciones
+- Corrección de todos los correos electrónicos a dominio oficial `@wetzelspretzels.ec` en todas las páginas, formularios y documentos legales
+- Actualización de información de contacto y ubicaciones:
+  - Paseo San Francisco como local principal
+  - Teléfonos y horarios actualizados
+- Mejoras menores en textos de productos y descripciones en el menú
+  - Corrección de nombres e imágenes en productos del menú
+- Actualización de enlaces y textos en FAQ, gallery, privacy-policy y terms-conditions
+- README actualizado con email oficial
+- Limpieza y corrección de detalles menores en todos los archivos HTML y scripts
+
+---
+
 ## [1.2.0] - 2025-08-06
 
 ### 🎨 Mejoras de Diseño y Experiencia
@@ -290,7 +310,7 @@ Primera versión completa del sitio web oficial de Wetzel's Pretzels Ecuador.
 - **Font Awesome 6.4.0** para iconografía
 - **Google Fonts** para tipografías Londrina Solid y Roboto
 - **Google Maps** integrado en página de ubicaciones
-- **Redes Sociales** enlaces a Facebook, Instagram, Twitter y TikTok
+- **Redes Sociales** enlaces a Facebook, Instagram y TikTok
 
 ### 🎯 Características Especiales
 

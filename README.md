@@ -154,13 +154,13 @@ Este proyecto es propiedad de **Wetzel's Pretzels Ecuador**. Todos los derechos 
 
 ## 📞 Contacto
 
-- **Email**: info@wetzels-ecuador.com
+- **Email**: info@wetzelspretzels.ec
 - **Teléfono**: +593 (0) 999 999 999
 - **Ubicación**: Quito, Ecuador
 
 ## 🏷️ Versión
 
-**Versión Actual**: 1.0.0 (Agosto 2025)
+**Versión Actual**: 1.2.1 (Septiembre 2025)
 
 ---
 
