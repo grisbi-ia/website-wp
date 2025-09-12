@@ -28,6 +28,23 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
+## [1.2.3] - 2025-09-12
+
+### 🛠️ Cambios y Correcciones
+
+- about.html
+  - Sección "Preguntas Frecuentes" ahora con fondo amarillo de marca y títulos en azul para mejor contraste
+  - CTA actualizado a estilo reutilizable: botón azul con texto blanco y hover blanco/azul (`btn-blue-on-yellow`)
+  - Sección "Nuestro Equipo" comentada para ocultarla temporalmente
+- find-a-location.html
+  - "Próximas Ubicaciones" ahora con fondo amarillo y textos en azul
+- index.html
+  - Ocultadas temporalmente (comentadas) las cajas de precio en productos destacados del carrusel
+- contact.html
+  - Sección de mapa comentada temporalmente mientras se actualiza
+
+---
+
 ## [1.2.1] - 2025-09-03
 
 ### 🛠️ Cambios y Correcciones
