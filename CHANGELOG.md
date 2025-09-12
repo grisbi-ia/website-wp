@@ -5,6 +5,29 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.2.2] - 2025-09-12
+
+### 🛠️ Cambios y Correcciones
+
+- Menú (`menu.html`):
+  - Precios ocultos temporalmente con comentarios HTML en múltiples productos (Pretzels, Wetzel Bitz, Wetzel Dogs, Dips y Bebidas, incluyendo Café)
+  - Renombrados para mayor claridad: "Jalapeño Cheese" → "Jalapeño Cheddar Cheese"; "Cheese Dog Bites" → "Cheesy Dog Bites"
+  - Alt text de imágenes actualizado acorde a los nuevos nombres
+  - Imagen de Fresh Lemonade actualizada
+- Ubicaciones (`find-a-location.html`):
+  - Imagen de la tienda insignia actualizada a una nueva ruta en subcarpeta (`images/paseo_san_francisco/...`)
+  - Secciones desactivadas temporalmente (comentadas) mientras se actualiza la información: Mapa de Google, Tour Virtual y Entrega a domicilio
+- Galería (`gallery.html`):
+  - Sección "Galería de Locales" deshabilitada temporalmente
+  - Galería tipo Masonry actualizada con nuevas fotos del local Paseo San Francisco (1–6) y dos imágenes adicionales (equipo y pretzels)
+  - Nuevas rutas usando subcarpetas `images/paseo_san_francisco/` e `images/masonry/`
+- Assets:
+  - Agregadas imágenes: `images/paseo_san_francisco/{paseo_san_francisco.jpeg,_1.jpeg,_2.jpeg,_3.jpeg,_4.jpeg,_5.jpeg,_6.jpeg}` y `images/masonry/{m1_paseo_san_francisco_team.jpeg,m2_pretzels.jpeg}`
+  - Eliminada imagen antigua: `images/paseo_san_francisco.jpeg`
+  - Modificada: `images/fresh_lemonade.jpg`
+
+---
+
 ## [1.2.1] - 2025-09-03
 
 ### 🛠️ Cambios y Correcciones
