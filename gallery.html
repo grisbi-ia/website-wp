@@ -466,13 +466,13 @@
                 <p>Observa cómo se preparan nuestros deliciosos pretzels artesanales</p>
             </div>
 
-            <div class="video-container animate-on-scroll">
-                <div class="tour-video" style="width: 80%; margin: 0 auto;">
-                    <img src="images/img1.jpg" alt="Video de preparación de pretzels">
-                    <div class="video-play">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
+            <div class="video-container" style="width: 100%; max-width: 600px; height: 60vw; max-height: 550px; overflow: hidden; margin: 0 auto;">
+                <video id="wetzelsVideo" class="video" controls preload="metadata"
+                 style="width: 100%; height: 100%; object-fit: cover;"
+                 onclick="this.paused ? this.play() : this.pause();">
+                <source src="video/wetzel_in_action.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
             </div>
         </div>
     </section>

@@ -5,6 +5,23 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.2.4] - 2025-09-22
+
+### 🛠️ Cambios y Correcciones
+
+- Menú (`menu.html`)**:
+  - Actualización de información de menu
+
+- Galería (`gallery.html`)**:
+  - Agregado video `wetzel_in_action.mp4` en sección "Vídeo Destacado"
+  - Implementado reproductor de video responsivo con controles nativos
+  - Optimizado para visualización de video vertical
+- Assets:
+  - Modificada: `images/fresh_lemonade.jpg`
+  - Agregado: `video/wetzel_in_action.mp4`
+
+---
+
 ## [1.2.2] - 2025-09-12
 
 ### 🛠️ Cambios y Correcciones
