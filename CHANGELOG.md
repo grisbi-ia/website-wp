@@ -5,6 +5,29 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.2.6] - 2025-10-03
+
+### 🛠️ Cambios y Correcciones
+
+- **Actualización de información de contacto en todo el sitio**:
+  - Números telefónicos actualizados a teléfonos reales de Ecuador
+  - Oficina Administrativa: `+593 99 460 0545`
+  - Paseo San Francisco: `+593 99 881 0252`
+  - Eliminación de números de teléfono placeholder/ficticios
+
+- **Corrección de correos electrónicos**:
+  - Servicio al Cliente: `servicio@wetzelspretzels.ec` → `atc@wetzelspretzels.ec`
+  - Soporte al Cliente: `soporte@wetzelspretzels.ec` → `atc@wetzelspretzels.ec`
+  - Unificación de atención al cliente bajo dominio `atc@`
+
+- **Archivos actualizados**:
+  - `README.md`: Teléfono de contacto principal
+  - `about.html`, `contact.html`, `faq.html`, `find-a-location.html`: Números telefónicos
+  - `gallery.html`, `index.html`, `menu.html`: Información de contacto en footer
+  - `privacy-policy.html`, `terms-conditions.html`: Emails de soporte y contacto
+
+---
+
 ## [1.2.5] - 2025-10-03
 
 ### 🛠️ Cambios y Correcciones
