@@ -5,6 +5,30 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.2.5] - 2025-10-03
+
+### 🛠️ Cambios y Correcciones
+
+- Menú (`menu.html`):
+  - Corrección de acentos: "Jalapeno" → "Jalapeño" en Cheese Melt
+  - Mejora en descripción de Pepperoni Twist (texto más conciso)
+  - Actualización descripción Jalaroni: mejor formateo del texto con saltos de línea
+  - Dog Bites: "Versión mini" → "La versión en bocadillos" para mayor claridad
+  - Cheesy Dog Bites: descripción mejorada "para no dejar a nadie sin probar"
+  - Fresh Lemonade: capitalización consistente "frambuesa roja" → "Frambuesa Roja"
+  - Frozen Granita: especificación más precisa "2 sabores" y "Frambuesa Azul y Fresa"
+
+- Página Principal (`index.html`):
+  - Fresh Lemonade: descripción actualizada mencionando sabores "Original o Frambuesa Roja"
+
+- Limpieza de archivos:
+  - Eliminados archivos de desarrollo no necesarios: `DEPLOYMENT-GUIDE.md`, `DESARROLLO_LOG.md`, `create-page.sh`
+
+- Assets:
+  - Imagen `fresh_lemonade.jpg` actualizada
+
+---
+
 ## [1.2.4] - 2025-09-22
 
 ### 🛠️ Cambios y Correcciones
