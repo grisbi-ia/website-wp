@@ -5,6 +5,45 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.2.7] - 2026-01-26
+
+### ✨ Nuevas Características
+
+- **Nueva ubicación agregada**:
+  - Centro Comercial Iñaquito - CCI
+  - Dirección: Av. Amazonas N36-152 y Naciones Unidas
+  - Horario: Lun - Vie: 10:00 - 20:00 | Sáb - Dom: 10:00 - 21:00
+  - Teléfono: +593 99 460 0545
+  - Badge "Nueva Tienda" para destacar la sucursal
+  - Integración con Google Maps
+
+### 🔧 Mejoras
+
+- **Enlaces de WhatsApp**:
+  - Todos los números +593 99 460 0545 ahora son enlaces directos a WhatsApp
+  - Formato: https://wa.me/593994600545
+  - Mantiene el estilo visual original
+  - Se abre en nueva pestaña
+  - Implementado en 15 instancias en 9 archivos HTML
+
+- **Actualización de título**:
+  - Cambio de "Nuestra Ubicación Actual" a "Nuestras Ubicaciones"
+  - Refleja correctamente las múltiples tiendas disponibles
+
+### 📁 Archivos Modificados
+
+- `find-a-location.html`: Nueva ubicación CCI, enlaces WhatsApp
+- `contact.html`: Enlaces WhatsApp
+- `index.html`: Enlaces WhatsApp en footer
+- `menu.html`: Enlaces WhatsApp en footer
+- `about.html`: Enlaces WhatsApp en footer
+- `gallery.html`: Enlaces WhatsApp en footer, reorganización de imágenes
+- `faq.html`: Enlaces WhatsApp en footer
+- `privacy-policy.html`: Enlaces WhatsApp
+- `terms-conditions.html`: Enlaces WhatsApp
+
+---
+
 ## [1.2.6] - 2025-10-03
 
 ### 🛠️ Cambios y Correcciones
