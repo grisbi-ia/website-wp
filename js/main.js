@@ -230,6 +230,57 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Manejar envío de formulario de eliminación de cuenta
+    const deleteAccountForm = document.getElementById('deleteAccountForm');
+    if (deleteAccountForm) {
+        deleteAccountForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Validar campos obligatorios
+            const email = this.querySelector('#email').value;
+            const confirmation = this.querySelector('#confirmation').checked;
+
+            if (!email) {
+                alert('Por favor ingresa tu correo electrónico.');
+                return;
+            }
+
+            if (!confirmation) {
+                alert('Debes confirmar que deseas eliminar tu cuenta.');
+                return;
+            }
+
+            // Aquí iría la lógica para enviar el formulario por AJAX
+            // Por ahora solo mostraremos un mensaje de confirmación
+
+            const formData = new FormData(this);
+            console.log('Formulario de eliminación enviado con los siguientes datos:');
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
+            }
+
+            // Mostrar mensaje de confirmación
+            this.innerHTML = `
+                <div style="text-align: center; padding: 40px;">
+                    <i class="fas fa-check-circle" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                    <h3>¡Solicitud Recibida!</h3>
+                    <p style="margin-bottom: 20px;">Tu solicitud de eliminación de cuenta ha sido enviada correctamente.</p>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">¿Qué sucede ahora?</h4>
+                        <ul style="text-align: left; display: inline-block;">
+                            <li>Procesaremos tu solicitud en un plazo máximo de 30 días calendario</li>
+                            <li>Te enviaremos una confirmación por correo electrónico</li>
+                            <li>Se eliminará toda tu información personal del sistema</li>
+                            <li>Tu acceso a la aplicación será deshabilitado permanentemente</li>
+                        </ul>
+                    </div>
+                    <p><strong>Correo de confirmación:</strong> ${email}</p>
+                    <button type="button" class="btn btn-primary" onclick="location.href='index.html'">Volver al inicio</button>
+                </div>
+            `;
+        });
+    }
+
     // Manejar búsqueda de ubicaciones
     const locationSearch = document.querySelector('.location-search');
     if (locationSearch) {

@@ -5,6 +5,60 @@ Todos los cambios notables de este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
+
+## [1.2.9] - 2026-03-09
+
+### ✨ Nuevas Características
+
+- **Nueva página de aplicación móvil**:
+  - `mobile-app.html`: Página completa dedicada al aplicativo móvil de Wetzel's
+  - Sección de descarga con información "Próximamente disponible"
+  - 12 funcionalidades destacadas del aplicativo (registro, puntos, billetera, etc.)
+  - Sección de soporte con información de contacto específica
+  - Links legales elegantes con diseño card sutil
+
+- **Nueva página de eliminación de cuenta**:
+  - `delete-account.html`: Página dedicada para solicitudes de eliminación de datos personales
+  - Formulario completo con validaciones del lado cliente
+  - Información legal sobre retención de datos fiscales (SRI Ecuador)
+  - Proceso paso a paso desde la aplicación móvil
+  
+- **Formulario de eliminación de cuenta**:
+  - Validación de campos obligatorios (email, confirmación)
+  - Captura de datos con FormData
+  - Mensaje de confirmación detallado con timeline del proceso
+  - Navegación posterior al envío
+  - Logging para debugging en consola  
+
+### 🔧 Mejoras
+
+- **Navegación actualizada**:
+  - Enlaces de "Eliminar Cuenta" agregados al footer de todas las páginas
+  - Enlace "Descargar App" agregado en footer bajo nueva sección "Aplicación Móvil"
+  - Navegación consistente mantenida en todas las páginas
+
+- **Formularios mejorados**:
+  - Formulario de eliminación de cuenta con funcionalidad JavaScript completa
+  - Validaciones del lado cliente para campos obligatorios
+  - Mensajes de confirmación profesionales y detallados
+  - Integración con el mismo sistema que el formulario de contacto
+
+### 🎨 Estilos CSS Nuevos
+
+- **Mobile App Page**:
+  - `.download-grid`: Sistema de descarga con información y preview
+  - `.app-preview-image`: Imagen del aplicativo con efectos hover
+  - `.steps-list` y `.step`: Lista numerada mejorada con alineación perfecta
+  - `.legal-grid` y `.legal-card`: Cards elegantes para información legal
+  - `.app-features`: Grid responsive para características del aplicativo
+  - `.screenshots-gallery`: Galería de capturas con placeholders
+
+- **Delete Account Page**:
+  - `.delete-form`: Formulario estilizado consistente con el sitio
+  - `.methods-grid`: Grid para métodos de eliminación (app vs web)
+  - `.info-boxes`: Cajas informativas sobre el proceso de eliminación
+
+
 ## [1.2.7] - 2026-01-26
 
 ### ✨ Nuevas Características
