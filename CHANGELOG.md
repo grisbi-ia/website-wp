@@ -6,6 +6,28 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 
+## [1.3.0] - 2026-05-12
+
+### ✨ Nuevas Características
+
+- **Google Analytics 4 + Metricool integrados**:
+  - `js/tracking.js`: Nuevo archivo unificado con GA4 y Metricool
+  - Carga diferida (`defer`) desde el `<head>` de todas las páginas
+  - Separación de responsabilidades: tracking desacoplado de `main.js`
+
+- **Popup promocional en página principal**:
+  - `index.html`: Agregado popup de apertura con imagen y enlace
+
+- **Nueva sucursal Cuenca**:
+  - Agregada ubicación de Cuenca en `find-a-location.html`
+
+### 🔧 Mejoras
+
+- **Imagen actualizada en página Sobre Nosotros**:
+  - `about.html`: Imagen actualizada en sección de Wetzel's en Ecuador
+
+
+
 ## [1.2.9] - 2026-03-09
 
 ### ✨ Nuevas Características

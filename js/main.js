@@ -436,4 +436,30 @@ document.addEventListener('DOMContentLoaded', function () {
         // Inicializar el primer slide
         goToSlide(0);
     }
+
+    const popup = document.getElementById('popupOpening');
+    const closeBtn = document.getElementById('popupClose');
+
+    if (popup && !sessionStorage.getItem('popupShown')) {
+        popup.classList.add('active');
+        sessionStorage.setItem('popupShown', 'true');
+    }
+
+    if (popup && closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            popup.classList.remove('active');
+        });
+
+        popup.addEventListener('click', function (e) {
+            if (e.target === this) {
+                popup.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && popup.classList.contains('active')) {
+                popup.classList.remove('active');
+            }
+        });
+    }
 });
